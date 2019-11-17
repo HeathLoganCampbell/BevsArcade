@@ -2,11 +2,12 @@
 A Minecraft Minigame plugin I made in 2017
 
 It allow servers to put on minigames
-!(BevsArcade logo)[arcadelogo.png]
+
+![BevsArcade logo](./arcadelogo.png)
 
 ### Cringe videos
-(Plugin tutorial - Spigot - How to install BevsArcade)[https://www.youtube.com/watch?v=z2TpiRXeQ6c]
-(BevsArcade - Multi Language Support -Developerment Log #1)[https://www.youtube.com/watch?v=x552MUTayEI]
+[Plugin tutorial - Spigot - How to install BevsArcade](https://www.youtube.com/watch?v=z2TpiRXeQ6c)
+[BevsArcade - Multi Language Support -Developerment Log #1](https://www.youtube.com/watch?v=x552MUTayEI)
 
 ### Why I stopped
 Bad return on investment because support costs kept growing.
