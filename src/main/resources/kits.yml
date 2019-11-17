@@ -1,0 +1,158 @@
+###############################################################################################################
+###############################################################################################################
+##																											 ##
+##																											 ##
+##		888888b.                                     d8888                                888          		 ##
+##		888  "88b                                   d88888                                888          		 ##
+##		888  .88P                                  d88P888                                888          		 ##
+##		8888888K.   .d88b.  888  888 .d8888b      d88P 888 888d888  .d8888b  8888b.   .d88888  .d88b.  		 ##
+##		888  "Y88b d8P  Y8b 888  888 88K         d88P  888 888P"   d88P"        "88b d88" 888 d8P  Y8b 		 ##
+##		888    888 88888888 Y88  88P "Y8888b.   d88P   888 888     888      .d888888 888  888 88888888		 ##
+##		888   d88P Y8b.      Y8bd8P       X88  d8888888888 888     Y88b.    888  888 Y88b 888 Y8b.     		 ##
+##		8888888P"   "Y8888    Y88P    88888P' d88P     888 888      "Y8888P "Y888888  "Y88888  "Y8888  		 ##
+##                                                                                               			 ##
+##		This File is where you can edit all the kit's names, icons, armor, effects and items. So it's a	     ##
+##      bit tricky to understand because you are given the ability to edit everything about the kit.		 ##
+##                                                                                               			 ##
+##      What is a kit?                                                                           			 ##
+##      	A kit is a set of items, effects and abilities given to a player in the game to make the         ##
+##          games more intresting.                                                                  		 ##
+##                                                                                               			 ##
+##      Kits:                                                                                         		 ##
+##        example:                                                                                   		 ##
+##          DisplayName: Example                                                                             ##
+##          Description:                                                                            		 ##
+##          - '&7This is the description of the example'                                            		 ##
+##          Icon: TNT 0 1 (In this plugin a special format is used for giving items, it goes                 ##
+##                          <MATERIAL> <DATA> <AMOUNT>. The materials names can be found at     			 ##
+##                           https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html     			 ##
+##          Slots:        (This is the items that are given to the player binded to their slot) 			 ##
+##             '0': SNOW_BALL 0 1 Name=Example_Snowball (In minecraft the slots are off set by one, so		 ##
+##														 So the first slot in the hot bar is zero			 ##
+##														 All slots can be found here                         ##
+##                             https://bugs.mojang.com/secure/attachment/61101/Items_slot_number.jpg )       ##
+Kits:
+##		This is the kits id name, the players will never see this.                                 			 ##
+##      This name is used in giving the player the permission to use this kit   							 ##
+##      The kit permissions follow this format "BevsArcade.Kit.<KitIDName>"                                  ## 
+##		eg "BevsArcade.Kit.snowballer_spleef" 																 ##
+  snowballer_spleef:
+    DisplayName: Snowballer
+    Description:
+    - '&7Throw snowballs to break blocks!'
+    - '&7Receives 1 Snowball when you punch blocks!'
+    Icon: SNOW_BALL 0 1
+    Price: -1
+    Slots:
+      '0': SNOW_BALL 0 1
+    Abilities:
+    - ExtractAbility
+  brawler_spleef:
+    DisplayName: Brawler
+    Description:
+    - '&7Hit a block with your mighty axe to take out muitple blocks at once!'
+    Icon: IRON_AXE 0 1
+    Price: -1
+    Slots:
+      '0': IRON_AXE 0 1 Name=&lMighty_Axe
+    Abilities:
+    - LeapAbility
+    - SpleefBrawlerAbility
+  archer_spleef:
+    DisplayName: Archer
+    Description:
+    - '&7Fire an arrow that does increased damage to blocks'
+    Icon: BOW 0 1
+    Price: -1
+    Slots:
+      '0': BOW 0 1
+      '1': ARROW 0 1 Name=&lSpleef_Arrow
+    Abilities:
+    - SpleefArcherAbility
+    - FletcherAbility(ArrowDisplayName=&lSpleef_Arrow)
+  archer_oitc:
+    DisplayName: Archer
+    Description:
+    - '&7Leap into battle'
+    Icon: BOW 0 1
+    Slots:
+      '0': BOW 0 1
+      '1': IRON_AXE 0 1
+      '2': COMPASS 0 1 Name=&rCompass_&7(Right_Click_To_Track)
+      '8': ARROW 0 1
+    Abilities:
+    - LeapAbility(CooldownSeconds=3)
+  warrior_oitc:
+    DisplayName: Warrior
+    Description:
+    - '&7Do more damage'
+    Icon: IRON_SWORD 0 1
+    Slots:
+      '0': BOW 0 1
+      '1': IRON_SWORD 0 1
+      '2': COMPASS 0 1 Name=&rCompass_&7(Right_Click_To_Track)
+      '8': ARROW 0 1
+    Abilities:
+    - LeapAbility(CooldownSeconds=5,ItemName=IRON_SWORD)
+  slambam_oitc:
+    DisplayName: SlamBam
+    Description:
+    - '&7Right click to do damage to everyone round you'
+    Icon: IRON_SPADE 0 1
+    Slots:
+      '0': BOW 0 1
+      '1': IRON_SPADE 0 1
+      '2': COMPASS 0 1 Name=&rCompass_&7(Right_Click_To_Track)
+      '8': ARROW 0 1
+    Abilities:
+    - SlamBamAbility
+  archer_micro:
+    DisplayName: Archer
+    Description:
+    - '&7Shot?'
+    Icon: BOW 0 1
+    Slots:
+      '0': WOOD_SWORD 0 1
+      '1': BOW 0 1
+      '2': APPLE 0 3
+    Helmet: LEATHER_HELMET 0 1
+    Chestplate: LEATHER_CHESTPLATE 0 1
+    Leggings: LEATHER_LEGGINGS 0 1
+    Boots: LEATHER_BOOTS 0 1
+    Abilities:
+    - FletcherAbility(MaxArrows=3,SprintSeconds=20.0)
+  fighter_micro:
+    DisplayName: Fighter
+    Description:
+    - '&7Fight?'
+    Icon: IRON_SWORD 0 1
+    Slots:
+      '0': WOOD_SWORD 0 1
+      '1': APPLE 0 5
+    Helmet: LEATHER_HELMET 0 1
+    Chestplate: LEATHER_CHESTPLATE 0 1
+    Leggings: LEATHER_LEGGINGS 0 1
+    Boots: LEATHER_BOOTS 0 1
+    Abilities:
+    - HardSkinAbility
+  worker_micro:
+    DisplayName: Worker
+    Description:
+    - '&7Dig?'
+    Icon: STONE_PICKAXE 0 1
+    Slots:
+      '0': WOOD_SWORD 0 1
+      '1': STONE_SPADE 0 1
+      '2': STONE_PICKAXE 0 1
+      '3': APPLE 0 1
+    Helmet: LEATHER_HELMET 0 1
+    Chestplate: LEATHER_CHESTPLATE 0 1
+    Leggings: LEATHER_LEGGINGS 0 1
+    Boots: LEATHER_BOOTS 0 1
+  jumper_rainingblocks:
+    DisplayName: Worker
+    Description:
+    - '&7Jump over blocks'
+    Icon: LEATHER_BOOTS 0 1
+    Effects:
+    - JUMP 99999 2 True

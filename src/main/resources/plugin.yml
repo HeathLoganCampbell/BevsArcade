@@ -1,0 +1,15 @@
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+main: ${project.groupId}.${project.artifactId}
+permissions:
+   bevsarcade.command.join:
+      default: true
+   bevsarcade.command.quit:
+      default: true
+   bevsarcade.command.forcejoin:
+      default: op
+   bevsarcade.command.kit:
+      default: true
+   bevsarcade.command.creator:
+      default: true
