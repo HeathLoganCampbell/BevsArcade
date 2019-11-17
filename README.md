@@ -1,5 +1,5 @@
 # BevsArcade
-A Minecraft Minigame plugin I made in 2015
+A Minecraft Minigame plugin I made in 2017
 
 It allow servers to put on minigames
 
